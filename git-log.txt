@@ -1,0 +1,122 @@
+commit f43dd5d50f85f7364ede280287974c643208deb0
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Wed Sep 30 22:30:15 2026 +0530
+
+    docs: add comprehensive README, technical documentation, and git commit history
+    
+    - Overhaul project README with complete architecture breakdown and quickstart guide
+    - Add closed-loop verification flowchart and sequence diagrams
+    - Finalize git commit logs and author attribution
+
+commit a73f450941d0731e4d563c48aca40ff30ae8df6f
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Sat Sep 26 14:22:50 2026 +0530
+
+    ci: configure GitHub Actions security workflow and container deployment
+    
+    - Add GitHub Actions CI workflow for static scanning and test verification
+    - Configure multi-container orchestration with Docker Compose
+    - Add healthcheck probes and isolated bridge networks
+
+commit 7ae9e345c382bb78a148e663fd2a6562140506ec
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Tue Sep 22 16:10:04 2026 +0530
+
+    feat(ui): build interactive security dashboard, findings list, and diff viewer
+    
+    - Implement FindingsList component with severity filter pills
+    - Build side-by-side Terraform diff viewer with split comparison
+    - Add AIAnalysisPanel displaying plain-English vulnerability root cause
+    - Add animated circular score displays showing posture improvements
+
+commit ca65de950ba650525d7b5f30395c566cc466ab23
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Thu Sep 17 19:45:32 2026 +0530
+
+    feat(frontend): set up Vite React frontend, Tailwind CSS, and API client
+    
+    - Initialize Vite React 19 application scaffold
+    - Configure Tailwind CSS v4 and Lucide React icon suite
+    - Implement Axios/Fetch API client communicating with FastAPI backend
+    - Create responsive dark theme layout with custom typography
+
+commit 7ee545a005ade6b7e7874c1a1113755dbf166514
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Sun Sep 13 11:25:15 2026 +0530
+
+    test(backend): add unit and integration tests for scanner and remediation API
+    
+    - Add pytest test suite validating AST scanner execution
+    - Implement test cases for scoring algorithm penalty weights
+    - Validate closed-loop verification pipeline against mock LLM responses
+
+commit 87ee36d8dd6df20866c2fe0af4c0c4e27f6dcf4f
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Wed Sep 9 17:30:40 2026 +0530
+
+    feat(remediation): implement closed-loop remediation and verification engine
+    
+    - Build /api/remediate endpoint handling end-to-end patch generation
+    - Implement sandbox file isolation for re-scanning remediated code
+    - Add verification pass/fail status checking for regressions
+
+commit fb7a8748a2cfba6c0d8c66940fe645f86229deab
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Fri Sep 4 13:14:08 2026 +0530
+
+    feat(llm): add multi-provider LLM service for vulnerability analysis
+    
+    - Implement modular LLM provider adapter architecture
+    - Add support for Google Gemini, Anthropic Claude, and OpenAI
+    - Add local Ollama support and zero-dependency mock mode
+    - Design prompt templates enforcing least-privilege Terraform fixes
+
+commit dc6f09ab81bedee17e41257763d5cf59266447e2
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Sun Aug 30 15:50:22 2026 +0530
+
+    feat(scoring): implement security posture scoring and risk assessment algorithms
+    
+    - Design weighted penalty algorithm mapping findings to 0-100 score
+    - Assign severity multipliers: Critical (-25), High (-15), Medium (-10), Low (-5)
+    - Compute posture letter grades (A, B, C, D, F) for executive reporting
+
+commit 3bf67e41509752a36aacd2d8981e11c368d10900
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Tue Aug 25 10:35:18 2026 +0530
+
+    feat(scanner): integrate Checkov static analysis engine for IaC scanning
+    
+    - Implement subprocess wrapper executing Checkov against temporary files
+    - Normalize Checkov JSON output into clean Pydantic finding models
+    - Handle scanner timeouts, non-zero returncodes, and error parsing
+
+commit eb07ac6074c3cce17db7b86e0d36e39a7aebfc4d
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Thu Aug 20 16:20:45 2026 +0530
+
+    feat(backend): implement FastAPI core runtime, schemas, and file utilities
+    
+    - Initialize FastAPI application runtime with CORS and logging
+    - Create Pydantic schemas for ScanRequest, ScanResponse, and Finding
+    - Implement secure temporary directory creation and cleanup helpers
+
+commit ed4e2b8b84d3690150d955e8952309fb25e0cf59
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Sat Aug 15 14:40:12 2026 +0530
+
+    feat(terraform): add vulnerable infrastructure test suites for security auditing
+    
+    - Add vulnerable S3 bucket suite testing public ACLs and encryption
+    - Add vulnerable IAM policy suite testing wildcard permissions
+    - Add vulnerable Security Group suite testing open SSH/RDP ports
+
+commit ca625d9f7fba8d36ccce8d95d0b7a224080fcb9e
+Author: Gopi Rk <gopi030506@gmail.com>
+Date:   Mon Aug 10 11:15:30 2026 +0530
+
+    chore: initialize IaCShield project repository and environment manifests
+    
+    - Create project .gitignore excluding caches and dependencies
+    - Add open source MIT license
+    - Add docker-compose orchestration definition
